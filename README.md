@@ -13,7 +13,7 @@ brew install pandoc pandoc-crossref
 make
 ```
 
-Результат — `article.docx` в корне проекта.
+Результат — `article.docx` в корне проекта. Готовый файл также добавлен в репозиторий.
 
 Очистка:
 
@@ -38,7 +38,7 @@ make clean
 .
 ├── src/                     # главы статьи
 ├── images/                  # рисунки
-├── article.docx             # результат сборки (не входит в Git)
+├── article.docx             # готовый документ
 ├── bibliography.bib
 ├── build.cmd
 ├── document.yaml
