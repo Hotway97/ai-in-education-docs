@@ -10,10 +10,12 @@ input-files:
   - src/06_references.md
 from: markdown+tex_math_single_backslash+raw_attribute
 to: docx
+number-sections: true
 output-file: article.docx
 standalone: true
 reference-doc: template.docx
 filters: # обработчики
+  - heading-style.lua # заголовки и разрывы страниц
   - pandoc-crossref # для нумерации рисунков и таблиц
   - citeproc # для списка литературы
 bibliography: bibliography.bib

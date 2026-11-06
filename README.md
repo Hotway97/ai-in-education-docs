@@ -43,6 +43,7 @@ make clean
 ├── build.cmd
 ├── document.yaml
 ├── gost-r-7.0.100-2018.csl
+├── heading-style.lua
 ├── Makefile
 ├── README.md
 ├── template.docx
@@ -74,6 +75,7 @@ pandoc --defaults=document.yaml
 | `document.yaml` | Порядок разделов и параметры Pandoc |
 | `bibliography.bib` | Источники для автоматического списка литературы |
 | `gost-r-7.0.100-2018.csl` | Стиль оформления ссылок и библиографии |
+| `heading-style.lua` | Заголовки капсом и разрывы страниц перед главами |
 | `update-fields.py` | Включает обновление полей Word при открытии |
 | `build.cmd` | Запуск сборки на Windows |
 | `Makefile` | Сборка и очистка на macOS/Linux |
@@ -84,7 +86,8 @@ pandoc --defaults=document.yaml
 - две формулы языковой модели;
 - два рисунка с интерфейсами Duolingo и ChatGPT;
 - две таблицы: технологии и сценарии;
-- автоматическая нумерация рисунков и таблиц через `pandoc-crossref`.
+- автоматическая нумерация рисунков и таблиц через `pandoc-crossref`;
+- каждая глава, оглавление и список литературы начинаются с новой страницы.
 
 ## Стили
 
