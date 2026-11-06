@@ -6,14 +6,14 @@
 
 ## Зависимости
 
-Список версий и команд установки — в [DEPENDENCIES.md](DEPENDENCIES.md). Для macOS зависимости можно установить из `Brewfile`.
+Сторонних Python-пакетов нет: `update-fields.py` использует только стандартную библиотеку. Системные зависимости перечислены в `requirements.txt` и в разделе запуска ниже.
 
 ## Запуск на macOS
 
 Нужны Pandoc, pandoc-crossref и Python 3.
 
 ```bash
-brew bundle --file=Brewfile
+brew install pandoc pandoc-crossref python
 make
 ```
 
@@ -44,14 +44,13 @@ make clean
 ├── images/                  # рисунки
 ├── article.docx             # готовый документ
 ├── bibliography.bib
-├── Brewfile
 ├── build.cmd
-├── DEPENDENCIES.md
 ├── document.yaml
 ├── gost-r-7.0.100-2018.csl
 ├── heading-style.lua
 ├── Makefile
 ├── README.md
+├── requirements.txt
 ├── template.docx
 └── update-fields.py
 ```

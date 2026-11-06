@@ -1,0 +1,14 @@
+# Сторонние Python-пакеты не требуются.
+# update-fields.py использует только стандартную библиотеку Python.
+#
+# Системные зависимости:
+# - Pandoc >= 3.8
+# - pandoc-crossref >= 0.3.26a
+# - GNU Make
+# - Python >= 3.9
+#
+# macOS:
+# brew install pandoc pandoc-crossref python
+#
+# Windows:
+# см. README.md и build.cmd
