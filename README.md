@@ -102,7 +102,6 @@ pandoc --defaults=document.yaml
 | `Figure`, `Captioned Figure` | Размещение рисунков |
 | `Image Caption`, `Table Caption` | Подписи рисунков и таблиц |
 | `Compact`, `Table` | Абзацы в ячейках, сетка и оформление таблиц |
-| `Copyright` | Строка авторского права |
 
 ## Оглавление
 
