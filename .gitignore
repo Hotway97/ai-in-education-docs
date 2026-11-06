@@ -1,0 +1,7 @@
+/article.docx
+/article.pdf
+/pandoc/
+Thumbs.db
+.DS_Store
+~$*.docx
+__pycache__/

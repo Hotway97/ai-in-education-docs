@@ -1,0 +1,28 @@
+# Порядок разделов статьи.
+input-files:
+  - src/00_header.md
+  - src/00_toc.md
+  - src/01_intro.md
+  - src/02_technologies.md
+  - src/03_applications.md
+  - src/04_limitations.md
+  - src/05_conclusion.md
+  - src/06_references.md
+from: markdown+tex_math_single_backslash+raw_attribute
+to: docx
+output-file: article.docx
+standalone: true
+reference-doc: reference.docx
+filters: # обработчики
+  - pandoc-crossref # для нумерации рисунков и таблиц
+  - citeproc # для списка литературы
+bibliography: references.bib
+csl: gost.csl
+fail-if-warnings: true
+metadata:
+  lang: ru-RU
+  figureTitle: Рис.
+  tableTitle: Таблица
+  figPrefix: рис.
+  tblPrefix: табл.
+  titleDelim: "\u00A0—\u00A0"
