@@ -1,3 +1,9 @@
+"""Добавляет в DOCX флаг обновления полей Word.
+
+Скрипт вызывается после сборки документа Pandoc и обеспечивает
+автоматическое обновление оглавления при открытии файла.
+"""
+
 import os
 import sys
 import zipfile
@@ -9,6 +15,11 @@ SETTINGS_END_TAG = "</w:settings>"
 
 
 def add_update_fields_flag(settings_xml):
+    """Добавляет в XML настроек Word флаг обновления полей.
+
+    :param settings_xml: содержимое файла word/settings.xml
+    :return: XML с флагом обновления полей
+    """
     if "<w:updateFields" in settings_xml:
         return settings_xml
 
@@ -19,6 +30,13 @@ def add_update_fields_flag(settings_xml):
 
 
 def rebuild_docx(docx_path):
+    """Пересобирает DOCX, добавляя флаг обновления полей.
+
+    Исходный файл заменяется новым архивом с изменённым
+    файлом word/settings.xml.
+
+    :param docx_path: путь к DOCX-файлу
+    """
     temporary_path = docx_path.with_name(docx_path.name + ".tmp")
 
     with zipfile.ZipFile(docx_path, "r") as source:
@@ -37,6 +55,7 @@ def rebuild_docx(docx_path):
 
 
 def main():
+    """Запускает обработку DOCX, переданного аргументом командной строки."""
     if len(sys.argv) != 2:
         raise SystemExit("Usage: python3 update-fields.py article.docx")
 
