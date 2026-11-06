@@ -1,23 +1,23 @@
 # Порядок разделов статьи.
 input-files:
-  - src/00_header.md
-  - src/00_toc.md
-  - src/01_intro.md
-  - src/02_technologies.md
-  - src/03_applications.md
-  - src/04_limitations.md
-  - src/05_conclusion.md
-  - src/06_references.md
+  - article/00-title.md
+  - article/01-contents.md
+  - article/02-introduction.md
+  - article/03-technologies.md
+  - article/04-applications.md
+  - article/05-limitations.md
+  - article/06-conclusion.md
+  - article/07-references.md
 from: markdown+tex_math_single_backslash+raw_attribute
 to: docx
 output-file: article.docx
 standalone: true
-reference-doc: reference.docx
+reference-doc: template.docx
 filters: # обработчики
   - pandoc-crossref # для нумерации рисунков и таблиц
   - citeproc # для списка литературы
-bibliography: references.bib
-csl: gost.csl
+bibliography: bibliography.bib
+csl: gost-r-7.0.100-2018.csl
 fail-if-warnings: true
 metadata:
   lang: ru-RU

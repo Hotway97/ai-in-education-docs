@@ -4,7 +4,7 @@ PANDOC ?= pandoc
 
 all:
 	$(PANDOC) --defaults=document.yaml
-	python3 tools/finalize_docx.py article.docx
+	python3 update-fields.py article.docx
 
 clean:
 	rm -f article.docx
