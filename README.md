@@ -6,7 +6,7 @@
 
 ## Зависимости
 
-Сторонних Python-пакетов нет: `update-fields.py` использует только стандартную библиотеку. Системные зависимости перечислены в `requirements.txt` и в разделе запуска ниже.
+Сторонних Python-пакетов нет: `update-fields.py` использует только стандартную библиотеку. Системные зависимости перечислены в разделах запуска ниже.
 
 ## Запуск на macOS
 
@@ -50,7 +50,6 @@ make clean
 ├── heading-style.lua
 ├── Makefile
 ├── README.md
-├── requirements.txt
 ├── template.docx
 └── update-fields.py
 ```

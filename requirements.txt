@@ -1,4 +1,0 @@
-# - Pandoc >= 3.8
-# - pandoc-crossref >= 0.3.26a
-# - GNU Make
-# - Python >= 3.9
