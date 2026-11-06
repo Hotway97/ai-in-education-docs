@@ -2,7 +2,7 @@
 
 Статья собирается из Markdown в Word одной командой Pandoc. Оформление хранится в `template.docx` и редактируется через стили Word.
 
-Проект основан на шаблоне [Cionaodh/word-as-code](https://github.com/Cionaodh/word-as-code): сохранена структура `article/`, `document.yaml`, `template.docx`, `gost-r-7.0.100-2018.csl` и сборка через Pandoc. Оформление взято из первого примера [true-grue/kisscm](https://github.com/true-grue/kisscm): Times New Roman, A4, титульная шапка, номера страниц и стили заголовков. Содержание заменено на статью И. И. Алексеева, А. Ю. Грибченко, В. С. Дорофеева и А. М. Круглова «Применение искусственного интеллекта в сфере образования».
+Проект основан на шаблоне [Cionaodh/word-as-code](https://github.com/Cionaodh/word-as-code): сохранена структура `src/`, `images/`, `document.yaml`, `template.docx`, `gost-r-7.0.100-2018.csl` и сборка через Pandoc. Оформление взято из первого примера [true-grue/kisscm](https://github.com/true-grue/kisscm): Times New Roman, A4, титульная шапка, номера страниц и стили заголовков. Содержание заменено на статью И. И. Алексеева, А. Ю. Грибченко, В. С. Дорофеева и А. М. Круглова «Применение искусственного интеллекта в сфере образования».
 
 ## Запуск на macOS
 
@@ -36,7 +36,8 @@ make clean
 
 ```text
 .
-├── article/                 # главы и изображения
+├── src/                     # главы статьи
+├── images/                  # рисунки
 ├── article.docx             # результат сборки (не входит в Git)
 ├── bibliography.bib
 ├── build.cmd
@@ -60,15 +61,15 @@ pandoc --defaults=document.yaml
 
 | Файл | Назначение |
 | :--- | :--- |
-| `article/00-title.md` | УДК, авторы, название, аннотация и ключевые слова |
-| `article/01-contents.md` | Поле оглавления Word |
-| `article/02-introduction.md` | Введение |
-| `article/03-technologies.md` | Технологическая основа, формулы, рисунки и таблица технологий |
-| `article/04-applications.md` | Применение ИИ и таблица сценариев |
-| `article/05-limitations.md` | Ограничения и риски |
-| `article/06-conclusion.md` | Заключение |
-| `article/07-references.md` | Список литературы и строка авторского права |
-| `article/duolingo-screen.png`, `article/chatgpt-screen.png` | Скриншоты интерфейсов |
+| `src/00_header.md` | УДК, авторы, название, аннотация и ключевые слова |
+| `src/00_toc.md` | Поле оглавления Word |
+| `src/01_intro.md` | Введение |
+| `src/02_technologies.md` | Технологическая основа, формулы, рисунки и таблица технологий |
+| `src/03_applications.md` | Применение ИИ и таблица сценариев |
+| `src/04_limitations.md` | Ограничения и риски |
+| `src/05_conclusion.md` | Заключение |
+| `src/06_references.md` | Список литературы и строка авторского права |
+| `images/duolingo-screen.png`, `images/chatgpt-screen.png` | Скриншоты интерфейсов |
 | `template.docx` | Стили Word в оформлении kisscm: Times New Roman, A4, номера страниц |
 | `document.yaml` | Порядок разделов и параметры Pandoc |
 | `bibliography.bib` | Источники для автоматического списка литературы |
@@ -105,7 +106,7 @@ pandoc --defaults=document.yaml
 
 ## Источники изображений
 
-Скриншоты взяты с официальных страниц приложений в App Store. Ссылки и оговорка об использовании — в `article/IMAGE-SOURCES.md`. Названия и интерфейсы принадлежат соответствующим правообладателям; изображения используются как иллюстрации в учебном проекте.
+Скриншоты взяты с официальных страниц приложений в App Store. Ссылки и оговорка об использовании — в `images/SOURCES.md`. Названия и интерфейсы принадлежат соответствующим правообладателям; изображения используются как иллюстрации в учебном проекте.
 
 ## Атрибуция
 

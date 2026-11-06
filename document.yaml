@@ -1,13 +1,13 @@
 # Порядок разделов статьи.
 input-files:
-  - article/00-title.md
-  - article/01-contents.md
-  - article/02-introduction.md
-  - article/03-technologies.md
-  - article/04-applications.md
-  - article/05-limitations.md
-  - article/06-conclusion.md
-  - article/07-references.md
+  - src/00_header.md
+  - src/00_toc.md
+  - src/01_intro.md
+  - src/02_technologies.md
+  - src/03_applications.md
+  - src/04_limitations.md
+  - src/05_conclusion.md
+  - src/06_references.md
 from: markdown+tex_math_single_backslash+raw_attribute
 to: docx
 output-file: article.docx
