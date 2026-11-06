@@ -93,7 +93,8 @@ pandoc --defaults=document.yaml
 
 | Стиль | За что отвечает |
 | :--- | :--- |
-| `Normal` | Times New Roman, интервал и абзацный отступ |
+| `Normal` | Times New Roman 14 pt, полуторный интервал, выравнивание по ширине |
+| `Body Text` | Абзацный отступ 1,25 см |
 | `UDC`, `Author` | УДК и сведения об авторах |
 | `Title`, `TitleLast` | Две части названия статьи |
 | `Abstract`, `Keywords` | Аннотация и ключевые слова |
