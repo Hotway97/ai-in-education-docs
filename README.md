@@ -4,12 +4,16 @@
 
 Проект основан на шаблоне [Cionaodh/word-as-code](https://github.com/Cionaodh/word-as-code): сохранена структура `src/`, `images/`, `document.yaml`, `template.docx`, `gost-r-7.0.100-2018.csl` и сборка через Pandoc. Оформление взято из первого примера [true-grue/kisscm](https://github.com/true-grue/kisscm): Times New Roman, A4, титульная шапка, номера страниц и стили заголовков. Содержание заменено на статью И. И. Алексеева, А. Ю. Грибченко, В. С. Дорофеева и А. М. Круглова «Применение искусственного интеллекта в сфере образования».
 
+## Зависимости
+
+Список версий и команд установки — в [DEPENDENCIES.md](DEPENDENCIES.md). Для macOS зависимости можно установить из `Brewfile`.
+
 ## Запуск на macOS
 
 Нужны Pandoc, pandoc-crossref и Python 3.
 
 ```bash
-brew install pandoc pandoc-crossref
+brew bundle --file=Brewfile
 make
 ```
 
@@ -40,7 +44,9 @@ make clean
 ├── images/                  # рисунки
 ├── article.docx             # готовый документ
 ├── bibliography.bib
+├── Brewfile
 ├── build.cmd
+├── DEPENDENCIES.md
 ├── document.yaml
 ├── gost-r-7.0.100-2018.csl
 ├── heading-style.lua
